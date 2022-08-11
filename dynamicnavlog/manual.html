@@ -2,28 +2,33 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Privacy Policy</title>
+<title>Manual</title>
 <meta name="description" content="Dynamiv NavLog Privacy Policy">
 <meta name="author" content="Artyum">
+<style>
+  body {background-color: white; font-family: Verdana}
+  h1 {color: red;}
+  p {color: blue;}
+</style>
 </head>
 <body>
 <img src="img/header.png"/>
 <ul>
 <li><a href="index.html">Home page</a></li>
-<li><a href="manual.html">Instructions</a></li>
+<li><a href="manual.html">Manual</a></li>
 <li><a href="changelog.html">Change log</a></li>
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=com.artyum.dynamicnavlog">Google App Store</a></li>
 </ul>
-<h1>Dynamic NavLog Instructions</h1>
+<h1>Dynamic NavLog Manual</h1>
 
 <p><b>Remarks</b></p>
 <ul>
-<li>The app tested in real life by a PPL pilot.</li>
-<li>The app was designed for VFR conditions.
-<li>The app will always save the current state and will recover in case of device unsuspected restart or in other circumstances.</li>
+<li>The app was tested in real life by a PPL pilot.</li>
+<li>The app was designed for VFR conditions.</li>
+<li>The app will always save the current state and will recover in case of device unsuspected restart or app crash.</li>
 <li>The app can reliably work in the background (when the device's screen is off) only if necessary permissions to the GPS are granted in the Android system.</li>
-<li>The time in the app is in format h:mm'ss". Seconds are not displayed if the minutes are more then 10.
+<li>All times in the app are in format h:mm'ss". Seconds are not displayed if the minutes are more then 10.
 </ul>
 
 <p><b>Options</b></p>
@@ -41,8 +46,8 @@
 <p><b>Flight plan</b></p>
 <ul>
 <li>To create a flight plan select Menu->New flight plan.</li>
-<li>You have to to add an airplane before creating a flight plan.</li>
 <li>To manage flight plans go to Menu->Flight plans.</li>
+<li>In order to add an airplane to the flighgt plan it must be fists added to the airplane list.</li>
 <li>To open a flight plan click its name on the list.</li>
 <li>On the Settings page fill blank fields and choose an airplane.</li>
 </ul>
@@ -50,85 +55,95 @@
 <p><b>Flight plan route</b></p>
 <ul>
 <li>Use the map to create a flight plan route.</li>
-<li>First click on the map to create the takeoff point.</li>
+<li>First click on the map to create the takeoff position.</li>
 <li>Click on the map to create a waypoint.</li>
-<li>Press and hold (long-click) on the map to create a radial.</li>
 <li>Click on a marker to edit a wayipoint or a radial point.</li>
-<li>Long-click Press and hold on a marker to move it to the new position.</li>
-<li>To change waypoints order go to Navigation Log page and long-click on a row that you want to move. Then move it across the table.</li>
+<li>Press-and-hold (long-click) on the map to create a radial.</li>
+<li>Press-and-hold on a marker to move it to a new position.</li>
+<li>To change waypoints order go to Navigation Log page and prass-and-hold on a row that you want to move. Then move it across the table to desired position.</li>
 </ul>
 
 <p><b>Navigation</b></p>
 <ul>
 <li>When the flight plan is ready click on the OFF-BLOCK button. The block time will start to count.</li>
-<li>If T/O, LND and WPT detection is on, the app will continue to work in the background.</li>
-<li>If T/O, LND and WPT detection is off, you will have to manually advance the NavLog by usint the buttons BACK,NEXT and LANDING.</li>
-<li>At the end of the flight use ON-BLOCK nutton to stop.</li>
+<li>If T/O, LND and WPT detection is on, the app will continue to work in the background. The flight stages: Takeoff, Waypoint arrival and Landing, will be automatically detected.</li>
+<li>If T/O, LND and WPT detection is off, you will have to manually advance the NavLog by using the buttons BACK, NEXT and LANDING. The buttons will appear on the Flight display and Map pages.</li>
+<li>At the end of the flight click the ON-BLOCK button to stop the flight plan.</li>
 </ul>
 
-<p><b>Flight display</b></p>
+<p><b>Automatic flight stages</b></p>
 <ul>
-<li>WPT</li>
+<li>To open or start the flight plan use the button OFF-BLOCK.</li>
+<li>The Takeoff will be detected if the speed will exceed the threshold that is set in the Options.</li>
+<li>Waypoints are detected when an airplane will get close the the waypoint (marked as a circle on the map) and the distance from the waypoint will start to enlarge. The circle radius can be set in the Options.</li>
+<li>When an airplane enter the circle around a waypoint, on the top navigation bar on the map page the Next HDG will be displayed until a new waypoint is active.</li>
+<li>Landing will be detected if an airplane position is inside the last circle and the speed decrease below the threshold set in the options.</li>
+<li>To close the flight plan use the button ON-BLOCK.</li>
+</ul>
+
+<h2>Flight display items</h2>
+<p>WPT</p>
 <ul>
 <li>[center] Current waypoint</li>
 </ul>
-<li>HDG</li>
+<p>HDG</p>
 <ul>
 <li>[left] Direct heading to the waypoint from current position.</li>
 <li>[center] Heading to the waypoint on the track.</li>
 <li>[right] Heading to the next waypoint.</li>
 </ul>
-<li>ETE</li>
+<p>ETE</p>
 <ul>
 <li>[left] Time elapsed since the last waypoint.</li>
 <li>[center] Estimated time enroute to the current waypoint. This is calculated with or without GPS data.</li>
 </ul>
-<li>GS</li>
+<p>GS</p>
 <ul>
 <li>GPS indicator - Green if GPS signal is present or red otherwise.</li>
 <li>[center] Current ground speed from the GPS or calculated.</li>
 <li>[right] Difference in the speed in comapre to the speed calculated in the navigation log. If the difference is big, check the TAS and wind conditions on the Setting page.</li>
 </ul>
-<li>DTK</li>
+<p>DTK</p>
 <ul>
 <li>[left] Direct track to the current waypoint</li>
 <li>[center] Desired track to the current waypoint.</li>
 <li>[right] Angle between the DTK and the current position of the airplane.</li>
 </ul>
-<li>DIST</li>
+<p>DIST</p>
 <ul>
 <li>[left] Distance from previous waypoint.</li>
 <li>[center] Distance to the current waypoint.</li>
 <li>[right] Progress in %.</li>
 </ul>
-<li>ETA</li>
+<p>ETA</p>
 <ul>
 <li>[center] Estimated time of arrival to the last waypoint.</li>
 <li>[right] Differene between calculated and actual ETA. Positive number means that the flight will take longer than the time estamited at the beginning of the flight.</li>
 </ul>
-<li>TIME TO LAND</li>
+<p>TIME TO LAND</p>
 <ul>
 <li>[center] Remaining flight time.</li>
 <li>[right] Progress of the flight in %.</li>
 </ul>
-<li>FUEL TO LAND</li>
+<p>FUEL TO LAND</p>
 <ul>
 <li>[center] Fuel needed to fly to the last waypoint.</li>
 </ul>
-<li>BLOCK TIME</li>
+<p>BLOCK TIME</p>
 <ul>
 <li>[center] Time calculated betten the OFF-BLOCK and ON-BLOCK.</li>
 </ul>
-<li>ENDURANCE</li>
+<p>ENDURANCE</p>
 <ul>
 <li>[center] The maximum time of flight until the fuel is depleted.</li>
 </ul>
-<li>FUEL REMAIN.</li>
+<p>FUEL REMAIN.</p>
 <ul>
 <li>[center] Fuel remaining in the airplane tank.</li>
 <li>[right] Percentage of fuel left in the tank.</li>
 </ul>
-</ul>
+
 <p>The app has also many other features not described on this page.</p>
+
 </body>
 </html>
